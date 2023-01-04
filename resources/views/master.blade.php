@@ -40,7 +40,7 @@
                 <div class="top-style2-left">
                     <p><span class="icon-music"></span>Nous avons des réponses</p>
                     <ul>
-                        <li>+243 903265212</li>
+                        <li>+243 819813887</li>
                         <li>contact@ywca-drc.org</li>
                         <li>Lun - Ven: 9h00 à 16h00</li>
                     </ul>
@@ -89,6 +89,7 @@
                                     <ul>
                                         <li><a href="{{route('about')}}">A propos de YWCA DRC</a></li>
                                         <li><a href="{{route('faq')}}">FAQ’s</a></li>
+                                        <li><a href="{{route('become.member')}}">Devenir membre</a></li>
                                         <li><a href="{{route('about.logo')}}">Notre logo</a></li>
                                     </ul>
                                 </li>
@@ -123,7 +124,7 @@
                             <a href="shoping-cart.html"><span class="icon-bag"><span class="number">0</span></span></a>
                         </div> --}}
                         <div class="button">
-                            <a class="btn-one" href="#">Faire un don<span ></span></a>
+                            <a class="btn-one" href="{{route('don')}}">Faire un don<span ></span></a>
                         </div>
                     </div>
                 </div>
@@ -230,7 +231,7 @@
                                             <span class="icon-support1"></span>
                                         </div>
                                         <div class="text">
-                                            <p>+243 903265212<br>+243 818273042 <br> <span>Lun - ven :</span> 9h00—16h00</p>
+                                            <p>+243 819813887<br>+243 812700501<br> <span>Lun - ven :</span> 9h00—16h00</p>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +243,7 @@
                                             <span class="icon-shipping-and-delivery"></span>
                                         </div>
                                         <div class="text">
-                                            <p>contact@ywca-drc.org<br> crystalocareer@gmail.com</p>
+                                            <p>contact@ywca-drc.org<br> ywcardc@yahoo.fr</p>
                                         </div>
                                     </div>
                                 </div>
@@ -299,9 +300,9 @@
 --->
     <script src="{{asset('js/map-helper.js')}}"></script>
 
-    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
-    <script src="assets/timepicker/timePicker.js"></script>
-    <script src="assets/html5lightbox/html5lightbox.js"></script>
+    <script src="{{asset('assets/language-switcher/jquery.polyglot.language.switcher.js')}}"></script>
+    <script src="{{asset('assets/timepicker/timePicker.js')}}"></script>
+    <script src="{{asset('assets/html5lightbox/html5lightbox.js')}}"></script>
 
     <!--Revolution Slider-->
     <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>

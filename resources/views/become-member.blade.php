@@ -10,13 +10,13 @@
                     <div class="col-xl-12">
                         <div class="inner-content-box clearfix">
                             <div class="title-s2 text-center">
-                                <span>Contact</span>
-                                <h1>Entrez en contact avec nous</h1>
+                                <span>Membre</span>
+                                <h1>Devenir l'un de nous</h1>
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
                                     <li><a href="{{route('home')}}">Accueil</a></li>
-                                    <li class="active">Contact</li>
+                                    <li class="active">Devenir membre</li>
                                 </ul>
                             </div>
                         </div>
@@ -30,10 +30,8 @@
 <!--Start Contact details Area-->
 <section class="contact-details-area">
     <div class="sec-title text-center">
-        <p>Contact</p>
-        {{-- <div class="title clr-white">Comment pouvons-nous <span>vous aider?</span></div> --}}
-        <div class="title">Comment pouvons-nous <span>vous aider?</span></div>
-
+        <p>Membre</p>
+        <div class="title">Comment devenir <span>Notre ?</span></div>
     </div>
     <div class="parallax-background" style="background-image:url(images/parallax-background/contact-details-bg.html);"></div>
     <div class="container">
@@ -76,42 +74,54 @@
                         <div class="col-xl-6 col-lg-6">
                             <div class="contact-details-form-box">
                                 <div class="title-box">
-                                    <h2>Formulaire de contact</h2>
+                                    <h2>Formulaire du demande d'adhésion</h2>
                                 </div>
                                 <div class="contact-details-box">
-                                    <form class="contact-details-form" action="{{route('contact')}}" method="post">
+                                    <form class="contact-details-form" action="{{route('become.member')}}" method="POST">
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="single-box">
-                                                    <input type="text" name="name" value="" placeholder="Nom" required="">
+                                                    <input type="text" name="nom" value="" placeholder="Nom" required="">
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="single-box">
-                                                    <input type="email" name="email" value="" placeholder="Email" required="">
+                                                    <input type="text" name="prenom" value="" placeholder="Prénom" required="">
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="single-box">
-                                                    <select class="selectpicker" data-width="100%">
-                                                    <option selected="selected">Select Your Service</option>
-                                                    <option>Concept Designs</option>
-                                                    <option>Project Designs</option>
-                                                    <option>Make Overs</option>
-                                                    <option>Consulting</option>
-                                                    <option>Glass & Wrought</option>
-                                                    <option>Space Planning</option>
-                                                </select>
-                                                </div>
-                                            </div>
-                                        </div> --}}
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="single-box">
-                                                    <textarea name="message" placeholder="Message" required=""></textarea>
+                                                    <select name="pays" class="selectpicker" data-width="100%" required="">
+                                                        <option selected="selected">Sélectionnez votre pays</option>
+                                                        <option>Concept Designs</option>
+                                                        <option>Project Designs</option>
+                                                        <option>Make Overs</option>
+                                                        <option>Consulting</option>
+                                                        <option>Glass & Wrought</option>
+                                                        <option>Space Planning</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-4">
+                                            <div class="col-xl-6">
+                                                <div class="single-box">
+                                                    <input type="text" name="ville" value="" placeholder="Ville" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="single-box">
+                                                    <input type="text" name="telephone" value="" placeholder="Téléphone" required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="single-box">
+                                                    <input type="text" name="adresse" value="" placeholder="Adresse" required="">
                                                 </div>
                                             </div>
                                         </div>

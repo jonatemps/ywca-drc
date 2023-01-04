@@ -125,6 +125,55 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="blog-single-bottom-content-box">
+                            <h2>Vision </h2>
+                            <p>La vision de la YWCA-DRC est celle de la YWCA mondiale, un monde sans exclusion aucune, où la justice, la paix, la santé, la dignité humaine et la préservation de l’Environnement sont promues et soutenues durement grâce au leadership des femmes.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="blog-single-bottom-content-box">
+                            <h2>Mission</h2>
+                            <p>La YWCA-DRC a pour mission de promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer l’éducation, la liberté, la justice et la paix de toute la population.</p>
+                            {{-- <div class="row">
+                                <div class="col-xl-6">
+                                    <ul>
+                                        <li>Righteous indignation dislike demoralized.</li>
+                                        <li>Nothing prevents able to do we like best ever.</li>
+                                        <li>Equal blame those who fail theirduty.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6">
+                                    <ul>
+                                        <li>Except to obtain some advantage from it?.</li>
+                                        <li>One who avoids pain that produce resultant.</li>
+                                    </ul>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="blog-single-bottom-content-box">
+                            <h2>Les béneficiaires de nos actions</h2>
+                            {{-- <p>La YWCA-DRC a pour mission de promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer l’éducation, la liberté, la justice et la paix de toute la population.</p> --}}
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <ul>
+                                        <li>Les filles et femmes de toute origine, nationalité, confession et couche sociale, les communautés ainsi que les hommes et les enfants en situation difficile et de détresse ;</li>
+                                        <li>Les communautés, les églises, les branches locales et provinciales ainsi que toute la population de la RDC.</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class="row fact-counter">
                     <!--Start Single Fact Counter-->
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
@@ -140,6 +189,7 @@
                         </div>
                     </div>
                     <!--End Single Fact Counter-->
+
                     <!--Start Single Fact Counter-->
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-fact-counter wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">

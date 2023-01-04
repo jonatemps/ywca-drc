@@ -1,6 +1,9 @@
 <?php
 
 use App\Models\Category;
+use App\Models\Contact;
+use App\Models\Don;
+use App\Models\Membre;
 use App\Models\Photo;
 use App\Models\Post;
 use App\Models\Service;
@@ -59,10 +62,6 @@ Route::get('/gallery', function () {
     return view('gallery')->with(['services' => $services,'photos' => $photos]);
 })->name('gallery');
 
-Route::get('/contact', function () {
-    $services = Service::all();
-    return view('contact')->with(['services' => $services]);
-})->name('contact');
 
 Route::get('/posts', function () {
     $services = Service::all();
@@ -83,3 +82,51 @@ Route::get('/post/{title?}/{id?}', function () {
 
     return view('post')->with(['services' => $services,'post' => $post,'categories' => $categories,'recentsPosts' => $recentsPosts]);
 })->name('post');
+
+
+Route::get('/contact', function () {
+    $services = Service::all();
+
+
+    return view('contact')->with(['services' => $services]);
+})->name('contact');
+
+Route::post('/contact',function (Contact $contact){
+    // $contact =  Contact::class;
+    $contact->fill(request()->input())->save();
+
+    return back()->with('success', 'Merci de nous avoir contacté !');
+
+
+});
+
+Route::get('/become-member', function () {
+    $services = Service::all();
+
+    return view('become-member')->with(['services' => $services]);
+})->name('become.member');
+
+Route::post('/become-member', function (Membre $membre) {
+
+    $membre->fill(request()->input())->save();
+
+    return back()->with('success', 'Votre demande d\'adhésion a été soumis avec succès !');
+
+})->name('become.member');
+
+
+Route::get('/don', function () {
+    $services = Service::all();
+
+    return view('don')->with(['services' => $services]);
+})->name('don');
+
+Route::post('don', function (Don $don) {
+
+    $don->fill(request()->input())->save();
+    $titre = ucwords(request()->input('titre'));
+    $nom = ucwords(request()->input('prenom').' '.request()->input('nom'));
+
+    return back()->with("success", "Nous vous remercions $titre $nom, votre intention de donation a été prise en compte. Nous vous contacterons pour la procédure de donation.");
+
+});

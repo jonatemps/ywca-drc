@@ -188,9 +188,10 @@
                                 <div class="title">Pourquoi les gens<br>nous accordent <span>l’attention</span></div>
                             </div>
                             <ul>
-                                <li>Passionnés</li>
-                                <li>Présent</li>
-                                <li>Réguliers</li>
+                                <li>L’auto-détermination des femmes et filles</li>
+                                <li>Leadership qui améliore le statut des femmes et des enfants dans le </li>
+                                <li>Leadership de jeunes femmes</li>
+                                <li>Le souci de l’environnement  </li>
                             </ul>
                             <div class="button">
                                 <a class="btn-one" href="{{route('contact')}}">Nous contacter<span class="flaticon-next"></span></a>
@@ -203,8 +204,8 @@
                                     <span class="icon-guarantee-certificate1"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h3>La Qualité</h3>
-                                    <p>Nous faisons l’effort d’ajouter la qualité à tous nos œuvres pour le plaisir de ceux à qui nous rendons service.</p>
+                                    <h3>La foi chrétienne </h3>
+                                    <p>La croyance en Dieu et en la certitude de la rédemption des péchés apportée par la Passion et la résurrection de Jésus.</p>
                                 </div>
                             </div>
                             <!--End Single Box-->
@@ -214,8 +215,8 @@
                                     <span class="icon-guarantee-certificate1"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h3>La Disponibilité</h3>
-                                    <p>Notre disponibilité nous a permis de rester ouvert envers toute personne tant physique que morale et de garder un bon contact.</p>
+                                    <h3>La solidarité mondiale</h3>
+                                    <p>Elle englobe les valeurs de justice sociale et d’équité ; la bonne volonté entre les peuples et les nations et l’intégrité de la communauté internationale.</p>
                                 </div>
                             </div>
                             <!--End Single Box-->
@@ -225,8 +226,8 @@
                                     <span class="icon-guarantee-certificate1"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h3><a href=""></a>La Patience</h3>
-                                    <p>En attendant le changement que nous voulons, nous faisons preuve de patience envers nous-même et envers les autres.</p>
+                                    <h3><a href=""></a>La diversité, l’inclusive, la tolérance et le respect </h3>
+                                    <p>Favoriser la promotion de la diversité, l’inclusive, la tolérance et le respect parmi les gens puisque ces aspects contribuent énormément dans l’évolution humaine.</p>
                                 </div>
                             </div>
                             <!--End Single Box-->
@@ -236,8 +237,8 @@
                                     <span class="icon-guarantee-certificate1"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h3>L'Assiduité</h3>
-                                    <p>Nous présent, de manière régulière là où la situation nous oblige à défendre l’intérêt de la jeune femme ou fille.</p>
+                                    <h3>L’intégrité et la responsabilité</h3>
+                                    <p>Cet engagement de la YWCA-DRC d’exercer son métier de façon consciente et raisonnable, afin de se garantir le plus possible des résultats positifs.</p>
                                 </div>
                             </div>
                             <!--End Single Box-->
@@ -256,11 +257,14 @@
                     <p class="bottom-text">Pour l’intérêt du genre féminin nous organisons des services de qualité favorisant son intégration dans la société.</p>
                 </div>
                 <div class="row">
-                    <!--Start single service style1-->
+
+                    @foreach ($services as $service)
+                    @if ($service->name == 'Psychothérapie')
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/1.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -305,12 +309,13 @@
                             </div>
                         </div>
                     </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
+
+                    @elseif ($service->name == 'Sport, Art et Créativité')
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/2.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -355,12 +360,13 @@
                             </div>
                         </div>
                     </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
+
+                    @elseif ($service->name == 'Sensibilisation')
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/3.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -405,12 +411,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
+
+                    @elseif ($service->name == 'Médical')
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/4.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -455,10 +461,11 @@
                             </div>
                         </div>
                     </div>
+                    @elseif ($service->name == 'Juridique')
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/4.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -503,10 +510,11 @@
                             </div>
                         </div>
                     </div>
+                    @elseif ($service->name == 'Formation')
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="images/services/4.jpg" alt="Awesome Image">
+                                <img src="{{$service->image_one}}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                                 <div class="overlay-content-box">
                                     <div class="box">
@@ -551,6 +559,16 @@
                             </div>
                         </div>
                     </div>
+                    @endif
+
+                    @endforeach
+
+
+
+
+
+
+
                     <!--End single service style1-->
                 </div>
             </div>
