@@ -180,7 +180,7 @@
                         <div class="single-fact-counter wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
                             <div class="count-box">
                                 <h1>
-                                    <span class="timer" data-from="1" data-to="{{date("Y",time()) - 2018}}" data-speed="5000" data-refresh-interval="50">{{date("Y",time()) - 2018}}</span>
+                                    <span class="timer" data-from="1" data-to="{{date("Y",time()) - 2001}}" data-speed="5000" data-refresh-interval="50">{{date("Y",time()) - 2001}}</span>
                                 </h1>
                             </div>
                             <div class="title">
@@ -195,8 +195,8 @@
                         <div class="single-fact-counter wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="count-box">
                                 <h1>
-                                    <span class="timer" data-from="1" data-to="5" data-speed="5000" data-refresh-interval="50">5</span>
-                                    <img src="images/icon/k.png" alt="">
+                                    <span class="timer" data-from="1" data-to="64" data-speed="5000" data-refresh-interval="50">64</span>
+                                    {{-- <img src="images/icon/k.png" alt=""> --}}
                                 </h1>
                             </div>
                             <div class="title">
@@ -256,113 +256,39 @@
                 </div>
                 <div class="row">
                     <!--Start Single Team Member-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-team-member">
-                            <div class="img-holder">
-                                <img src="images/team/v2-1.jpg" alt="Awesome Image">
-                                <ul class="sociallinks">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                </ul>
-                                {{-- <div class="overlay">
-                                    <div class="box">
-                                        <div class="link">
-                                            <a class="btn-two" href="blog.html">View Profile<span class="flaticon-next"></span></a>
+                    @foreach ($teams as $team)
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="single-team-member">
+                                <div class="img-holder">
+                                    <img src="{{$team->photo}}" alt="Awesome Image">
+                                    <ul class="sociallinks">
+                                        @if ($team->facebook)
+                                            <li><a href="{{$team->facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        @endif
+                                        @if ($team->twitter)
+                                            <li><a href="{{$team->twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        @endif
+                                        @if ($team->linkedin)
+                                            <li><a href="{{$team->linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        @endif
+                                    </ul>
+                                    {{-- <div class="overlay">
+                                        <div class="box">
+                                            <div class="link">
+                                                <a class="btn-two" href="blog.html">View Profile<span class="flaticon-next"></span></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div> --}}
-                            </div>
-                            <div class="name text-center">
-                                <p><span>CEO & Founder</span></p>
-                                <h3>Alison Fletcher</h3>
+                                    </div> --}}
+                                </div>
+                                <div class="name text-center">
+                                    <p><span>{{$team->fonction}}</span></p>
+                                    <h3>{{$team->name}}</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                     <!--End Single Team Member-->
-                    <!--Start Single Team Member-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-team-member">
-                            <div class="img-holder">
-                                <img src="images/team/v2-2.jpg" alt="Awesome Image">
-                                <ul class="sociallinks">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                </ul>
-                                {{-- <div class="overlay">
-                                    <div class="box">
-                                        <div class="link">
-                                            <a class="btn-two" href="blog.html">View Profile<span class="flaticon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div> --}}
-                            </div>
-                            <div class="name text-center">
-                                <p><span>Designer</span></p>
-                                <h3>Joe Wilson</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Member-->
-                    <!--Start Single Team Member-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-team-member">
-                            <div class="img-holder">
-                                <img src="images/team/v2-3.jpg" alt="Awesome Image">
-                                <ul class="sociallinks">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                </ul>
-                                {{-- <div class="overlay">
-                                    <div class="box">
-                                        <div class="link">
-                                            <a class="btn-two" href="blog.html">View Profile<span class="flaticon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div> --}}
-                            </div>
-                            <div class="name text-center">
-                                <p><span>Architect</span></p>
-                                <h3>White Grey</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Member-->
-                    <!--Start Single Team Member-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-team-member">
-                            <div class="img-holder">
-                                <img src="images/team/v2-4.jpg" alt="Awesome Image">
-                                <ul class="sociallinks">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                </ul>
-                                {{-- <div class="overlay">
-                                    <div class="box">
-                                        <div class="link">
-                                            <a class="btn-two" href="blog.html">View Profile<span class="flaticon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div> --}}
-                            </div>
-                            <div class="name text-center">
-                                <p><span>Manager</span></p>
-                                <h3>Kevin Smith</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Member-->
+
                 </div>
             </div>
         </section>
@@ -375,52 +301,14 @@
                     <div class="col-xl-12">
                         <ul>
                             <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/1.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/2.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/3.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/4.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/5.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/6.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
+                            @foreach ($partners as $partner)
+                                <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <a href="#"><img src="{{$partner->logo}}" alt="{{$partner->name}}"></a>
+                                    <div class="overlay-content">
+                                        <p>{{$partner->name}}</p>
+                                    </div>
+                                </li>
+                            @endforeach
                             <!--End Single Brand Item-->
 
                         </ul>

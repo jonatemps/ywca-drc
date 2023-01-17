@@ -4,10 +4,14 @@ use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Don;
 use App\Models\Membre;
+use App\Models\Partner;
 use App\Models\Photo;
 use App\Models\Post;
 use App\Models\Service;
+use App\Models\Team;
+use App\Models\Testmony;
 use Illuminate\Support\Facades\Route;
+use Nnjeim\World\World;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +27,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $services = Service::all();
     $recentsPosts = Post::inRandomOrder()->limit(3)->get();
+    $partners = Partner::all();
+    $testmonies = Testmony::all();
 
-    return view('home')->with(['services' => $services,'recentsPosts' => $recentsPosts]);
+
+    return view('home')->with(['services' => $services,'recentsPosts' => $recentsPosts,'partners' => $partners,'testmonies' => $testmonies]);
 })->name('home');
 
 Route::get('/about', function () {
     $services = Service::all();
+    $teams = Team::inRandomOrder()->where('status','actif')->limit(4)->get();
+    $partners = Partner::all();
 
-    return view('about')->with(['services' => $services]);
+
+    return view('about')->with(['services' => $services,'teams' => $teams,'partners' => $partners]);
 })->name('about');
 
 
@@ -101,24 +111,51 @@ Route::post('/contact',function (Contact $contact){
 });
 
 Route::get('/become-member', function () {
+
+    $action =  World::countries();
+    // $action2 =  World::currencies();
+
+
+    if ($action->success) {
+        $countries = $action->data;
+        // foreach ($countries as $key => $value) {
+        //     dd($value['name']);
+        // }
+        // dd($countries);
+    }
     $services = Service::all();
 
-    return view('become-member')->with(['services' => $services]);
+    return view('become-member')->with(['services' => $services,'countries' => $countries]);
 })->name('become.member');
 
 Route::post('/become-member', function (Membre $membre) {
 
     $membre->fill(request()->input())->save();
+    $titre = request()->input('genre') == 'Féminin' ? 'Chère' : 'Cher';
+    $nom = ucwords(request()->input('prenom').' '.request()->input('nom'));
 
-    return back()->with('success', 'Votre demande d\'adhésion a été soumis avec succès !');
+    return back()->with('success', "Votre demande d\'adhésion a été soumis avec succès !, $titre $nom");
 
 })->name('become.member');
 
 
 Route::get('/don', function () {
+    $action =  World::countries();
+    // $action2 =  World::currencies();
+
+
+    if ($action->success) {
+        $countries = $action->data;
+        // foreach ($countries as $key => $value) {
+        //     dd($value['name']);
+        // }
+        // dd($countries);
+    }
+
+
     $services = Service::all();
 
-    return view('don')->with(['services' => $services]);
+    return view('don')->with(['services' => $services,'countries' => $countries]);
 })->name('don');
 
 Route::post('don', function (Don $don) {

@@ -123,12 +123,15 @@
                                                 <div class="single-box">
                                                     <div class="field-label mr-2">Selectionnez votre pays</div>
                                                     <select name="pays" class="selectpicker" data-width="100%" required="">
-                                                        <option>Concept Designs</option>
-                                                        <option>Project Designs</option>
+                                                        @foreach ($countries as $country)
+                                                            <option>{{$country['name']}}</option>
+                                                        @endforeach
+
+                                                        {{-- <option>Project Designs</option>
                                                         <option>Make Overs</option>
                                                         <option>Consulting</option>
                                                         <option>Glass & Wrought</option>
-                                                        <option>Space Planning</option>
+                                                        <option>Space Planning</option> --}}
                                                     </select>
                                                 </div>
                                             </div>

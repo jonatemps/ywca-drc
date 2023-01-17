@@ -20,7 +20,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        Aime ton prochain<br> comme toi-même.
+                                        By love we<br> serve one another.
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="big-title">
-                                        La foi en Dieu<br> tout puissant.
+                                        Aime ton prochain<br> comme toi-même.
                                     </div>
                                 </div>
                             </div>
@@ -647,34 +647,35 @@
                         <div class="testimonial-style2-content">
                             <div class="testimonial-carousel owl-carousel owl-theme">
                                 <!--Start Single Testimonial style2-->
+                                @foreach ($testmonies as $testmony)
                                 <div class="single-testimonial-style2 text-center">
                                     <div class="inner-content">
                                         <div class="static-content">
                                             <div class="quote-icon">
                                                 <span class="icon-quote3"></span>
+                                            </div>
+                                            <div class="text-box">
+                                                <p>{{$testmony->comment}}</p>
+                                            </div>
+                                            <div class="client-info">
+                                                <div class="review-box">
+                                                    <ul>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h3>{{$testmony->name}}</h3>
+                                            </div>
+                                        </div>
+                                        <div class="overlay-content">
+                                            <div class="img-box">
+                                                <img src="{{$testmony->photo}}" alt="Awesome Image">
                                             </div>
                                             <div class="text-box">
                                                 <p>Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Z. Gartrell Wright</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="images/testimonial/testi-style2-1.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.</p>
                                                 <div class="quote-icon">
                                                     <span class="icon-quote3"></span>
                                                 </div>
@@ -689,111 +690,12 @@
                                                         <li><i class="fa fa-star"></i></li>
                                                     </ul>
                                                 </div>
-                                                <h3>Z. Gartrell Wright</h3>
+                                                <h3>{{$testmony->name}}</h3>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--End Single Testimonial style2 -->
-
-                                <!--Start Single Testimonial style2-->
-                                <div class="single-testimonial-style2 text-center">
-                                    <div class="inner-content">
-                                        <div class="static-content">
-                                            <div class="quote-icon">
-                                                <span class="icon-quote3"></span>
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Indignation & dislike men who are so beguiled and demoralizeds by the charms ofpleasure of the moment.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cathrine Wagner</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="images/testimonial/testi-style2-2.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Indignation & dislike men who are so beguiled and demoralizeds by the charms ofpleasure of the moment.</p>
-                                                <div class="quote-icon">
-                                                    <span class="icon-quote3"></span>
-                                                </div>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cathrine Wagner</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single Testimonial style2 -->
-
-                                <!--Start Single Testimonial style2-->
-                                <div class="single-testimonial-style2 text-center">
-                                    <div class="inner-content">
-                                        <div class="static-content">
-                                            <div class="quote-icon">
-                                                <span class="icon-quote3"></span>
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Same as saying through shrinking from all pain these cases are perfectly simple easy to distinguish.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cuthbert Brain</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="images/testimonial/testi-style2-3.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Same as saying through shrinking from all pain these cases are perfectly simple easy to distinguish.</p>
-                                                <div class="quote-icon">
-                                                    <span class="icon-quote3"></span>
-                                                </div>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cuthbert Brain</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <!--End Single Testimonial style2 -->
                             </div>
                         </div>
@@ -814,53 +716,16 @@
                     <div class="col-xl-12">
                         <ul>
                             <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/1.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
+                            @foreach ($partners as $partner)
+                                <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <a href="#"><img src="{{$partner->logo}}" alt="{{$partner->name}}"></a>
+                                    <div class="overlay-content">
+                                        <p>{{$partner->name}}</p>
+                                    </div>
+                                </li>
+                            @endforeach
                             <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/2.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/3.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/4.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/5.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
-                            <!--Start Single Brand Item-->
-                            <li class="single-brand-item style2 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                <a href="#"><img src="images/brand/6.png" alt="Awesome Brand Image"></a>
-                                <div class="overlay-content">
-                                    <p>Miesian</p>
-                                </div>
-                            </li>
-                            <!--End Single Brand Item-->
+
 
                         </ul>
                     </div>

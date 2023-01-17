@@ -17,9 +17,9 @@
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images/favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" href="{{asset('images/favicon/favicon-32x32.png')}}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{asset('images/favicon/favicon-16x16.png')}}" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images\proprio\icon.jpg')}}">
+    <link rel="icon" type="image/png" href="{{asset('images\proprio\icon.jpg')}}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{asset('images\proprio\icon.jpg')}}" sizes="16x16">
 
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
@@ -192,7 +192,7 @@
                             <div class="subscribe-box">
                                 <form class="subscribe-form" action="#">
                                     <input type="email" name="email" placeholder="Votre Email">
-                                    <button class="btn-one" type="submit">Suscrire<span class="flaticon-next"></span></button>
+                                    <button class="btn-one" type="submit">Souscrire<span class="flaticon-next"></span></button>
                                 </form>
                                 <div class="text">
                                     <p><span>*</span>Souscrivez pour recevoir nos récentes nouvelles.</p>

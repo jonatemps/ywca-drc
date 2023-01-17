@@ -90,18 +90,24 @@
                                                     <input type="text" name="prenom" value="" placeholder="Prénom" required="">
                                                 </div>
                                             </div>
+                                            <div class="col-xl-12 ">
+                                                <div class="single-box">
+                                                    <select name="genre" class="selectpicker" data-width="100%" required="">
+                                                        <option selected="selected">Sélectionnez votre Genre</option>
+                                                        <option>Féminin</option>
+                                                        <option>Masculin</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-xl-12">
+                                            <div class="col-xl-12 mt-4">
                                                 <div class="single-box">
                                                     <select name="pays" class="selectpicker" data-width="100%" required="">
                                                         <option selected="selected">Sélectionnez votre pays</option>
-                                                        <option>Concept Designs</option>
-                                                        <option>Project Designs</option>
-                                                        <option>Make Overs</option>
-                                                        <option>Consulting</option>
-                                                        <option>Glass & Wrought</option>
-                                                        <option>Space Planning</option>
+                                                        @foreach ($countries as $country)
+                                                            <option>{{$country['name']}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
