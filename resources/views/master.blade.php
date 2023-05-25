@@ -146,7 +146,7 @@
                             <div class="our-info-box">
                                 <div class="footer-logo">
                                     <a href="index-2.html">
-                                        <img src="{{asset('images/footer/footer-logo.png')}}" alt="Awesome Logo">
+                                        <img src="{{asset('images\proprio\logo.png')}}" alt="Awesome Logo" width="250">
                                     </a>
                                 </div>
                                 <div class="text">
@@ -264,7 +264,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="copyright-text text-center">
-                            <p><a href="https://www.templateshub.net" target="_blank">Templates Hub</a></p>
+                            <p>Propulsé Par<a href="mailto:mupene7@gmail.com" target="_blank"> Jonatemps Mupene</a> | Numex |</p>
                         </div>
                     </div>
                 </div>
