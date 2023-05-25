@@ -3,6 +3,7 @@
 namespace App\Orchid\Resources;
 
 use App\Models\Category;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Orchid\Crud\Resource;
 use Orchid\Screen\TD;
@@ -29,11 +30,10 @@ class PostResource extends Resource
     public function fields(): array
     {
         return [
+            Input::make('user_id')
+            ->value(Auth::user()->id)
+            ->hidden(),
             Group::make([
-                Input::make('user_id')
-                    ->title('Auteur')
-                    ->value(Auth::user()->id),
-
                 Relation::make('category_id')
                     ->fromModel(Category::class, 'name')
                     ->title('Catégorie'),
@@ -101,5 +101,15 @@ class PostResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+
+    public function rules(Model $model): array
+    {
+        return [
+            // 'comment' => [
+            //     'max:103',
+            // ],
+        ];
     }
 }

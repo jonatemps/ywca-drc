@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Resources;
 
+use Illuminate\Database\Eloquent\Model;
 use Orchid\Crud\Resource;
 use Orchid\Screen\TD;
 use Orchid\Screen\Fields\Input;
@@ -33,7 +34,8 @@ class ServiceResource extends Resource
             Group::make([
                 Input::make('name')
                     ->title('Nom')
-                    ->placeholder('Entrez le nom de la catégorie'),
+                    ->require()
+                    ->placeholder('Entrez le nom du service'),
 
                 // TextArea::make('description')
                 //     ->title('Description')
@@ -44,13 +46,14 @@ class ServiceResource extends Resource
             ]),
             Quill::make('description')
             ->title('Description')
-            ->popover('Quill is a free, open source WYSIWYG editor built for the modern web.'),
-            
+            ->popover('Décrivez le service ici.'),
+
             Group::make([
                 Cropper::make('image_one')
                 ->title('Image 1')
                 ->width(500)
-                ->height(300),
+                ->height(300)
+                ->required(),
 
                 Cropper::make('image_two')
                 ->title('Image 2')
@@ -111,5 +114,14 @@ class ServiceResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+    public function rules(Model $model): array
+    {
+        return [
+            // 'comment' => [
+            //     'max:103',
+            // ],
+        ];
     }
 }

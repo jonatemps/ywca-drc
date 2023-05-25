@@ -27,8 +27,8 @@ use Nnjeim\World\World;
 Route::get('/', function () {
     $services = Service::all();
     $recentsPosts = Post::inRandomOrder()->limit(3)->get();
-    $partners = Partner::all();
-    $testmonies = Testmony::all();
+    $partners = Partner::limit(6)->get();
+    $testmonies = Testmony::limit(3);
 
 
     return view('home')->with(['services' => $services,'recentsPosts' => $recentsPosts,'partners' => $partners,'testmonies' => $testmonies]);
@@ -66,7 +66,7 @@ Route::get('/service/{service?}', function () {
 })->name('service');
 
 Route::get('/gallery', function () {
-    $photos = Photo::inRandomOrder()->simplePaginate(12);
+    $photos = Photo::inRandomOrder()->get();
     $services = Service::all();
 
     return view('gallery')->with(['services' => $services,'photos' => $photos]);
@@ -86,11 +86,21 @@ Route::get('/posts', function () {
 Route::get('/post/{title?}/{id?}', function () {
     $services = Service::all();
     $post = Post::where('id',request('id'))->where('title',request('title'))->first();
+    $next_post = Post::where('id',request('id') + 1)->first();
+    $prev_post = Post::where('id',request('id') - 1)->first();
+    
     $recentsPosts = Post::inRandomOrder()->limit(4)->get();
 
     $categories = Category::all();
 
-    return view('post')->with(['services' => $services,'post' => $post,'categories' => $categories,'recentsPosts' => $recentsPosts]);
+    return view('post')->with([
+        'services' => $services,
+        'post' => $post,
+        'categories' => $categories,
+        'recentsPosts' => $recentsPosts,
+        'prev_post' => $prev_post,
+        'next_post' => $next_post,
+    ]);
 })->name('post');
 
 
@@ -167,3 +177,10 @@ Route::post('don', function (Don $don) {
     return back()->with("success", "Nous vous remercions $titre $nom, votre intention de donation a été prise en compte. Nous vous contacterons pour la procédure de donation.");
 
 });
+
+Route::get('/services', function () {
+    $services = Service::all();
+
+
+    return view('services')->with(['services' => $services]);
+})->name('services');

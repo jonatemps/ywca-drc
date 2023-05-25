@@ -1,5 +1,8 @@
 @extends('master')
 
+@section('title')
+{{'YWCA-DRC | Service | '.$service->name}}
+@endsection
 
 @section('content')
 
@@ -79,7 +82,7 @@
                                 <div class="icon-holder">
                                     <div class="icon">
                                         <div class="inner text-center">
-                                            <a class="html5lightbox wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
+                                            <a class="html5lightbox wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms" title="YWCA-DRC Vidéo" href="https://www.youtube.com/watch?v=p25gICT63ek">
                                                 <span class="flaticon-play-button"></span>
                                             </a>
                                         </div>

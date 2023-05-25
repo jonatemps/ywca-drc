@@ -5,18 +5,19 @@
 
 
         <!--Start breadcrumb area-->
-        <section class="breadcrumb-area" style="background-image: url(images/resources/aaaaa.jpg);">
+        <section class="breadcrumb-area style2" style="background-image: url({{asset('images/resources/bbba.jpg')}});">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="inner-content clearfix">
-                            <div class="title">
-                                <h1>A propos du<br> YWCA-DRC.</h1>
+                        <div class="inner-content-box clearfix">
+                            <div class="title-s2 text-center">
+                                <span>A propos</span>
+                                <h1>A propos de la<br> YWCA-DRC.</h1>
                             </div>
-                            <div class="breadcrumb-menu float-right">
+                            <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
-                                    <li><a href="index-2.html">Home</a></li>
-                                    <li class="active">Account</li>
+                                    <li><a href="{{route('home')}}">Acceuil</a></li>
+                                    <li class="active">A propos</li>
                                 </ul>
                             </div>
                         </div>
@@ -37,7 +38,12 @@
                                 <div class="title">En savoir plus<br> <span>sur nous. </span></div>
                             </div>
                             <div class="text">
-                                <p>La YWCA-DRC a pour mission de promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer durablement l’éducation.</p>
+                                <p>
+                                    La YWCA-DRC (Young Women's Christian ASSOCIATION of the Democratic Republic of Congo) est une Association Sans But Lucratif (A.S.B.L) qui regroupe les jeunes filles et femmes de la République Démocratique du Congo. <br> <br>
+                                    Créée depuis le 12 Août 2001 et basée à Kinshasa, elle est affiliée depuis 2003 à la YWCA Mondiale (World YWCA) qui a son siège à Genève en Suisse. <br> <br>
+
+                                </p>
+                                <p>Elle a pour mission de promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer durablement l’éducation.</p>
                             </div>
                         </div>
                     </div>

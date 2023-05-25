@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Resources;
 
+use Illuminate\Database\Eloquent\Model;
 use Orchid\Crud\Resource;
 use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Group;
@@ -108,5 +109,15 @@ class TeamResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+
+    public function rules(Model $model): array
+    {
+        return [
+            // 'comment' => [
+            //     'max:103',
+            // ],
+        ];
     }
 }

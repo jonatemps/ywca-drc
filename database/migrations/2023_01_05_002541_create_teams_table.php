@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
-            $table->string('linkedid')->nullable();
+            $table->string('linkedin')->nullable();
             $table->string('status');
             $table->string('photo');
             $table->timestamps();

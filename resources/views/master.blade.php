@@ -5,21 +5,23 @@
 <!-- index-2 06:41:43 GMT -->
 <head>
     <meta charset="UTF-8">
-    <title>Home Two || Crystalo || Responsive HTML 5 Template</title>
+
+    <title>@yield('title')</title>
 
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta content="" name="ywca">
+    <meta content="" name="La YWCA-DRC se bat pour promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer durablement l’éducation.">
     <!-- master stylesheet -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images\proprio\icon.jpg')}}">
-    <link rel="icon" type="image/png" href="{{asset('images\proprio\icon.jpg')}}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{asset('images\proprio\icon.jpg')}}" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images\proprio\logo-transp.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('images\proprio\logo-transp.png')}}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{asset('images\proprio\logo-transp.png')}}" sizes="16x16">
 
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
@@ -41,8 +43,8 @@
                     <p><span class="icon-music"></span>Nous avons des réponses</p>
                     <ul>
                         <li>+243 819813887</li>
-                        <li>contact@ywca-drc.org</li>
                         <li>Lun - Ven: 9h00 à 16h00</li>
+                        <li>contact@ywca-drc.org</li>
                     </ul>
                 </div>
                 <div class="top-style2-right">
@@ -67,7 +69,7 @@
         <header class="main-header header-style2 stricky">
             <div class="inner-container clearfix">
                 <div class="logo-box-style2 float-left">
-                    <a href="{{route('home')}}">
+                    <a class="logo-size" href="{{route('home')}}">
                         {{-- <img src="images/resources/logo.png" alt="Awesome Logo"> --}}
                         {{-- <img src="images\proprio\cropped-LogoMitSchrift.png" alt="Awesome Logo" width="280"> --}}
                         <img src="{{asset('images\proprio\logo.png')}}" alt="Awesome Logo" width="250">
@@ -93,7 +95,7 @@
                                         <li><a href="{{route('about.logo')}}">Notre logo</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Services</a>
+                                <li class="dropdown"><a href="{{route('services')}}">Services</a>
                                     <ul>
                                         @foreach ($services as $service)
                                         <li><a href="{{route('service',['service' => $service->name])}}">{{$service->name}}</a></li>
@@ -305,18 +307,18 @@
     <script src="{{asset('assets/html5lightbox/html5lightbox.js')}}"></script>
 
     <!--Revolution Slider-->
-    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="js/main-slider-script.js"></script>
+    <script src="{{asset('plugins/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+    <script src="{{asset('plugins/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+    <script src="{{asset('js/main-slider-script.js')}}"></script>
 
     <!-- thm custom script -->
     <script src="{{asset('js/custom.js')}}"></script>

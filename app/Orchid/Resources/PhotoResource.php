@@ -3,6 +3,7 @@
 namespace App\Orchid\Resources;
 
 use App\Models\Service;
+use Illuminate\Database\Eloquent\Model;
 use Orchid\Crud\Resource;
 use Orchid\Screen\TD;
 use Orchid\Screen\Fields\Input;
@@ -32,9 +33,11 @@ class PhotoResource extends Resource
 
                 Relation::make('service_id')
                         ->fromModel(Service::class, 'name')
-                        ->title('Service'),
+                        ->title('Service')
+                        ->required(),
                 Input::make('description')
                     ->title('Description')
+                    ->required()
                     ->placeholder('Tapez un petit mot pour l\'image'),
             ]),
 
@@ -42,6 +45,7 @@ class PhotoResource extends Resource
                 Cropper::make('link')
                     ->title('Image')
                     ->width(370)
+                    ->required()
                     ->height(260),
 
                 Select::make('priority')
@@ -100,5 +104,14 @@ class PhotoResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+    public function rules(Model $model): array
+    {
+        return [
+            // 'comment' => [
+            //     'max:103',
+            // ],
+        ];
     }
 }

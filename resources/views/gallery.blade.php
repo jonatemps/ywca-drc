@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+{{'YWCA-DRC | gallery'}}
+@endsection
+
 @section('content')
 
 
@@ -35,7 +39,7 @@
                     <li data-filter="{{'.'.$service->id}}"><span class="filter-text">{{$service->name}}</span></li>
                     @endforeach
                 </ul>
-                
+
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
                     @foreach ($photos as $photo)
@@ -72,7 +76,14 @@
                         </ul>
                     </div>
                 </div> --}}
-                {!!$photos->links()!!}
+                {{-- {!!$photos->links()!!} --}}
+                <ul class="project-filter post-filter has-dynamic-filters-counter">
+                    <li data-filter=".filter-item" class="active"><span class="filter-text">Toutes les images</span></li>
+                    @foreach ($services as $service)
+
+                    <li data-filter="{{'.'.$service->id}}"><span class="filter-text">{{$service->name}}</span></li>
+                    @endforeach
+                </ul>
             </div>
         </section>
         <!--End Main project area style2-->

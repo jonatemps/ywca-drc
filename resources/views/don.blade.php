@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+{{'YWCA-DRC | Donate'}}
+@endsection
+
 @section('content')
 
 

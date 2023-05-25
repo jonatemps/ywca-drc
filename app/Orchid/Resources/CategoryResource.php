@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Resources;
 
+use Illuminate\Database\Eloquent\Model;
 use Orchid\Crud\Resource;
 use Orchid\Screen\TD;
 use Orchid\Screen\Fields\Input;
@@ -79,5 +80,15 @@ class CategoryResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+
+    public function rules(Model $model): array
+    {
+        return [
+            // 'comment' => [
+            //     'max:103',
+            // ],
+        ];
     }
 }

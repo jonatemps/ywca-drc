@@ -1,6 +1,11 @@
 @extends('master')
 
+@section('title')
+{{'YWCA-DRC | Acceuil'}}
+@endsection
+
 @section('content')
+
 
 
         <!--Main Slider-->
@@ -12,10 +17,9 @@
                             data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/slides/v2-1.jpg"
                             data-title="Slide Title" data-transition="parallaxvertical">
 
-                            {{-- <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/slides/v2-1.jpg"> --}}
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/proprio/aaaaa.jpg">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="right" data-bgrepeat="no-repeat" data-no-retina="" src="images/proprio/aaaaa.jpg">
 
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
@@ -24,22 +28,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Notre rôle dans la communauté.</div>
+                                    <div class="text">God's love in our hearts justifies our attention to others.</div>
                                 </div>
                             </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
+                                        <a class="html5lightbox play-button" title="YWCA-DRC Vidéo" href="https://www.youtube.com/watch?v=p25gICT63ek">
                                             <span class="flaticon-play-button"></span>
                                         </a>
-                                        {{-- <a class="slide-style2-button" href="#">More About Us</a> --}}
+                                        {{-- <a class="slide-style2-button" href="#">Plus A propos de nous</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -52,9 +56,9 @@
                             data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/slides/v2-2.jpg"
                             data-title="Slide Title" data-transition="parallaxvertical">
 
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/proprio/v2-2.jpg">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="right" data-bgrepeat="no-repeat" data-no-retina="" src="images/proprio/heroBlack.jpg">
 
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
@@ -63,64 +67,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
                         {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
-                                    <div class="text">Notre moteur.</div>
+                                    <div class="text">L’amour de Dieu dans nos cœurs justifie l’attention que nous portons aux autres.</div>
                                 </div>
                             </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1570','1190','700','450']" data-whitespace="normal"
                                 data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 style="z-index: 7; white-space: nowrap;">
                                 <div class="slide-content left-slide">
                                     <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
+                                        <a class="html5lightbox play-button" title="YWCA-DRC Vidéo" href="https://www.youtube.com/watch?v=p25gICT63ek">
                                             <span class="flaticon-play-button"></span>
                                         </a>
-                                        {{-- <a class="slide-style2-button" href="#">Services We Provide</a> --}}
+                                        {{-- <a class="slide-style2-button" href="#">Plus A propos de nous</a> --}}
                                     </div>
                                 </div>
                             </div>
-
-                        </li>
-
-                        {{-- <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default"
-                            data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/slides/v2-3.jpg"
-                            data-title="Slide Title" data-transition="parallaxvertical">
-
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/proprio/v2-3.jpg">
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="big-title">
-                                        Uniting design &<br> technology.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
-                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="text">Creating lasting impressions through interior design.</div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                            <span class="flaticon-play-button"></span>
-                                        </a>
-                                        {{-- <a class="slide-style2-button" href="#">View Our Projects</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-
-
 
                         </li>
                     </ul>
@@ -137,20 +102,24 @@
                         <div class="about-style2-text">
                             <div class="sec-title">
                                 {{-- <p>About Company</p> --}}
-                                <div class="title">Notre Object<br><span> SOCIAL</span></div>
+                                <div class="title">A propos <br><span>de NOUS</span></div>
                             </div>
                             <div class="text">
-                                <p>La YWCA-DRC se bat pour promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer durablement l’éducation.
+                                <p>
+                                    La YWCA-DRC (Young Women's Christian ASSOCIATION of the Democratic Republic of Congo) ou ( Union Chrétienne Féminine De La République Démocratique Du Congo ) est une filiale de la YWCA Mondiale.
+                                </p><br>
+                                <p>
+                                    La YWCA-DRC se bat pour promouvoir le leadership et le développement du pouvoir collectif des femmes et des jeunes filles en République Démocratique du Congo en vue d’assurer durablement l’éducation.
                                 </p>
                             </div>
                             <div class="authorised-info">
                                 <div class="signature">
                                     <img src="images/icon/signature.png" alt="Signature">
                                 </div>
-                                <div class="name">
+                                {{-- <div class="name">
                                     <h3>KL. Carl Ambrose</h3>
                                     <p>Chaiman & Founder</p>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="button">
                                 <a class="btn-one" href="{{route('about')}}">Plus à propos de nous<span class="flaticon-next"></span></a>
@@ -184,12 +153,12 @@
                     <div class="col-xl-12">
                         <div class="why-choose-title float-left">
                             <div class="sec-title">
-                                <div class="icon"><img src="images/proprio/IMG-20221101-WA0018.png" alt="Awesome Logo" width="65"></div>
+                                <div class="icon"><img src="images/proprio/logo-transp.png" alt="Awesome Logo" width="65"></div>
                                 <div class="title">Pourquoi les gens<br>nous accordent <span>l’attention</span></div>
                             </div>
                             <ul>
                                 <li>L’auto-détermination des femmes et filles</li>
-                                <li>Leadership qui améliore le statut des femmes et des enfants dans le </li>
+                                <li>Leadership qui améliore le statut des femmes et des enfants dans le monde </li>
                                 <li>Leadership de jeunes femmes</li>
                                 <li>Le souci de l’environnement  </li>
                             </ul>
@@ -639,15 +608,38 @@
           <section class="testimonial-style2-area">
             <div class="container">
                 <div class="sec-title text-center">
-                    <p>Témoignages</p>
-                    <div class="title"><span>Les mots</span> de nos amis</div>
+                    <p>Les mots de nos amis</p>
+                    <div class="title"><span>Les </span> Témoignages</div>
                 </div>
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
                         <div class="testimonial-style2-content">
                             <div class="testimonial-carousel owl-carousel owl-theme">
-                                <!--Start Single Testimonial style2-->
-                                @foreach ($testmonies as $testmony)
+                                @foreach ($testmonies->get() as $testmony)
+                                {{-- <div class="overlay-content">
+                                    <div class="img-box">
+                                        <img src="{{$testmony->photo}}" alt="Awesome Image">
+                                    </div>
+                                    <div class="text-box">
+                                        <p>{{$testmony->comment}}</p>
+                                        <div class="quote-icon">
+                                            <span class="icon-quote3"></span>
+                                        </div>
+                                    </div>
+                                    <div class="client-info">
+                                        <div class="review-box">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h3>{{$testmony->name}}</h3>
+                                    </div>
+                                </div> --}}
+                                                                <!--Start Single Testimonial style2-->
                                 <div class="single-testimonial-style2 text-center">
                                     <div class="inner-content">
                                         <div class="static-content">
@@ -675,7 +667,7 @@
                                                 <img src="{{$testmony->photo}}" alt="Awesome Image">
                                             </div>
                                             <div class="text-box">
-                                                <p>Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.</p>
+                                                <p>{{$testmony->comment}}</p>
                                                 <div class="quote-icon">
                                                     <span class="icon-quote3"></span>
                                                 </div>
@@ -695,8 +687,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
                                 <!--End Single Testimonial style2 -->
+                                @endforeach
                             </div>
                         </div>
                     </div>

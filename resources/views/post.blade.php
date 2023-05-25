@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+{{'YWCA-DRC | Article | '.$post->title}}
+@endsection
+
 @section('content')
 
 
@@ -68,36 +72,40 @@
 
                                 <!--Start prev next option-->
                                 <div class="blog-prev-next-option">
+                                    @if (isset($prev_post->id))
                                     <div class="single prev">
                                         <div class="image-thumb">
-                                            <img src="{{asset('images/blog/prev-thumb-1.jpg')}}" alt="Image">
+                                            <img src="{{asset($prev_post->image)}}" alt="Image">
                                             <div class="overlay">
                                                 <div class="box">
                                                     <div class="link">
-                                                        <a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Article Précedent</a>
+                                                        <a href="{{route('post',['title' => $prev_post->title,'id' => $prev_post->id])}}"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Article Précedent</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="title">
-                                            <h3><a href="#">Best low-cost interior designing ideas for your room</a></h3>
+                                            <h3><a href="{{route('post',['title' => $prev_post->title,'id' => $prev_post->id])}}">{{$prev_post->title}}</a></h3>
                                         </div>
                                     </div>
+                                    @endif
+                                    @if (isset($next_post->id))
                                     <div class="single next">
                                         <div class="image-thumb">
-                                            <img src="{{asset('images/blog/next-thumb-1.jpg')}}" alt="Image">
+                                            <img src="{{asset($next_post->image)}}" alt="Image">
                                             <div class="overlay">
                                                 <div class="box">
                                                     <div class="link">
-                                                        <a href="#">Article Suivant<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                                        <a href="{{route('post',['title' => $next_post->title,'id' => $next_post->id])}}">Article Suivant<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="title">
-                                            <h3><a href="#">Wondering if interior design is a dying filed? Read this</a></h3>
+                                            <h3><a href="{{route('post',['title' => $next_post->title,'id' => $next_post->id])}}">{{$next_post->title}}</a></h3>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
                                 <!--End prev next option-->
                             </div>
